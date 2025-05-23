@@ -7,24 +7,17 @@
 </head>
 <body>
 
-<form th:method="POST" th:action="@{/users}" th:object="${user}">
+<form th:action="@{/users}" th:object="${user}" method="POST">
     <label for="name">Name</label>
-    <input th:field="*{name}" type="text" id="name"/>
-
-    <br>
-
+    <input type="text" id="name" th:field="*{name}" required>
+    </br>
     <label for="surname">Surname</label>
-    <input th:field="*{surname}" type="text" id="surname"/>
-
-    <br>
-
+    <input type="text" id="surname" th:field="*{surname}" required>
+    </br>
     <label for="age">Age</label>
-    <input th:field="*{age}" type="text" id="age">
-
-    <br>
-
-    <input type="submit" value="Create"/>
-
+    <input type="text" id="age" th:field="*{age}" required>
+    </br>
+    <button type="submit">create user</button>
 </form>
 
 </body>
